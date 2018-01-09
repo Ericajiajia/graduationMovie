@@ -1,0 +1,28 @@
+{
+  "name": "graduationmovie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "font-spider": "^1.3.4",
+    "live-server": "^1.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-font-spider": "^0.3.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "live-server ./ --port=9090"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ericajiajia/graduationMovie.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ericajiajia/graduationMovie/issues"
+  },
+  "homepage": "https://github.com/Ericajiajia/graduationMovie#readme"
+}

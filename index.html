@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.2, user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="description" content="毕业电影H5">
+    <meta name="keywords" content="毕业电影">
+    <meta name="author" content="BingYan">
+    <title>毕业电影H5</title>
+    <script>
+        (function setFontSize () {
+            //动态改变根节点字体大小
+            var docEle = document.documentElement,
+                    evt = "onorientationchange" in window ? "orientationchange" : "resize",
+                    fn = function() {
+                        var width = docEle.clientWidth;
+                        var height = docEle.clientHeight;
+                        var scale = (width / height) / (750 / 1334);
+                        width && (docEle.style.fontSize = width / (3.75 * scale) + "px");
+                    };
+            window.addEventListener(evt, fn, false);
+            document.addEventListener("DOMContentLoaded", fn, false);
+        })()
+    </script>
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/animate.css">
+</head>
+
+<body>
+<!-- 基本背景 -->
+<div class="basicalBack">
+    <!-- 第一页 -->
+    <div class="firstPage">
+        <!-- 荧幕上的文字 -->
+        <div class="firstPage-title">
+            <div class="firstPage-image">
+                <img src="./static/pic/firstPage_fox.png" alt="fox" class="firstPage-img imgMove">
+            </div>
+            <div class="firstPage-content">毕业电影第八年</div>
+            <div class="guide-content">
+                <p>八年的记录</p>
+                <p>定格了无数华科人的身影</p>
+                <p>一起来试镜</p>
+                <p>让哔哔电影猜猜看</p>
+                <p>你是华科哪一幕中的老演员</p>
+            </div>
+        </div>
+        <!-- 放映机 -->
+        <div class="firstPage-macarea">
+            <img src="./static/pic/firstPage_machine.png" alt="machine" class="firstPage-machine">
+            <img src="./static/pic/firstPage_circle1.png" alt="circle1" class="firstPage-circle1">
+            <img src="./static/pic/firstPage_circle2.png" alt="circle2" class="firstPage-circle2">
+        </div>
+        <div class="firstPage-waves">
+            <div class="waves1"></div>
+        </div>
+        <div class="firstPage-button">让我猜猜看</div>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<script src="./static/js/tool.js"></script>
+<script src="./static/js/index.js"></script>
+</body>
+</html>
