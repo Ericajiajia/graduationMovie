@@ -1,3 +1,68 @@
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    .has-topbar {
+        height: 100%;
+        box-sizing: border-box;
+        padding-top: 54px;
+    }
+    .has-topbar::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 54px;
+        background-color: #000000;
+        z-index: 9998;
+    }
+    .has-bottombar {
+        height: 100%;
+        box-sizing: border-box;
+        padding-bottom: 44px;
+    }
+    .has-bottombar:after {
+        content: '';
+        z-index: 9998;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 44px;
+        background: #f7f7f8;
+    }
+    .firstPage-macarea {
+        bottom: .44rem !important;
+    }
+    .firstPage-title {
+        margin-top: .2rem !important;
+    }
+    .firstPage-button {
+        bottom: 1.8rem !important;
+    }
+    .firstPage-waves {
+        top: 3rem !important;
+    }
+    .statusBack {
+        top: .95rem !important;
+        height: 3.7rem !important;
+    }
+    .questionPage {
+        top: 1.6rem !important;
+    }
+    .resultBack {
+        top: .5rem !important;
+    }
+    .againButton, .shareButton {
+        bottom: 1.2rem !important;
+    }
+    .favorArea {
+        bottom: .5rem !important;
+    }
+    .resultImgPage {
+        top: .55rem !important;
+    }
+}
+
+
 @font-face {
 	font-family: 'hanyi45';
 	src: url('../font/hanyi45/hanyi45.eot');
@@ -31,11 +96,22 @@ html, body, .basicalBack {
 }
 .basicalBack {
     background: url(../pic/pages_background.png);
+
+    
     background-size: 100% 100%;
-    background-position: 50% 40%;
+    /*background-size: 170% 170%;*/
+
+
+    background-position: 50% 45%;
     transition: background-size 2s ease-out;
 }
 .firstPage {
+
+
+    /*display: none;*/
+    
+
+
     width: 100%;
     height: 100%;
     margin: 0;
@@ -46,12 +122,12 @@ html, body, .basicalBack {
     width: 100%;
     height: 3.4rem;
     margin: 0 auto 0;
-    padding: 1.5rem 0;
+    padding: 1.4rem 0;
     text-align: center;
     transition: padding-top 1s ease-out;
 }
 .titleMove {
-	padding-top: .6rem;
+	padding-top: .4rem;
 }
 .firstPage-img {
     width: .8rem;
@@ -60,7 +136,7 @@ html, body, .basicalBack {
     transition: width .1s ease;
 }
 .firstPage-content {
-    margin: .1rem auto 0;
+    margin: .2rem auto 0;
     font-size: .34rem;
     color: #0e4c68;
 }
@@ -169,8 +245,8 @@ html, body, .basicalBack {
 }
 @keyframes waves {
     0% {
-        width: .2rem;
-        height: .2rem;
+        width: .1rem;
+        height: .1rem;
         opacity: .75;
     }
     100% {
@@ -183,7 +259,7 @@ html, body, .basicalBack {
     background-size: 170% 170%;
 }
 .macareaMove {
-    bottom: -3rem;
+    bottom: -3rem !important;
 }
 .imgMove {
 	width: .96rem;
@@ -205,7 +281,7 @@ html, body, .basicalBack {
 .firstPage-button {
 	display: none;
 	position: fixed;
-	bottom: .9rem;
+	bottom: 1.2rem;
 	left: 50%;
 	margin-left: -.8rem;
 	width: 1.6rem;
@@ -217,3 +293,7 @@ html, body, .basicalBack {
 	background: url(../pic/firstPage_button.png);
 	background-size: 100% 100%;
 }
+.hide {
+    display: none;
+}
+

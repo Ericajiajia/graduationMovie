@@ -12,7 +12,14 @@
   animation-duration: 1s;
   animation-fill-mode: both;
 }
-
+.animated1 {
+  animation-duration: .6s;
+  animation-fill-mode: both;
+}
+.animated2 {
+  animation-duration: 8s;
+  animation-fill-mode: both;
+}
 .animated.infinite {
   animation-iteration-count: infinite;
 }

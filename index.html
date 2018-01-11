@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh_CN">
+<html lang="zh_CN" class="has-topbar has-bottombar">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.2, user-scalable=0" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.2, user-scalable=0, viewport-fit=cover" name="viewport" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="x-dns-prefetch-control" content="on">
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
     <meta content="telephone=no" name="format-detection" />
@@ -16,22 +18,28 @@
             var docEle = document.documentElement,
                     evt = "onorientationchange" in window ? "orientationchange" : "resize",
                     fn = function() {
-                        var width = docEle.clientWidth;
-                        var height = docEle.clientHeight;
-                        var scale = (width / height) / (750 / 1334);
-                        width && (docEle.style.fontSize = width / (3.75 * scale) + "px");
-                    };
-            window.addEventListener(evt, fn, false);
-            document.addEventListener("DOMContentLoaded", fn, false);
+                        var width = docEle.clientWidth
+                        var height = docEle.clientHeight
+                        var scale = (width / height) / (750 / 1334)
+                        if (height == 812) {
+                            docEle.style.fontSize = "100px"
+                        } else {
+                            width && (docEle.style.fontSize = width / (3.75 * scale) + "px")
+                        }
+                    }
+            window.addEventListener(evt, fn, false)
+            document.addEventListener("DOMContentLoaded", fn, false)
         })()
     </script>
-    <link rel="stylesheet" href="./static/css/main.css">
     <link rel="stylesheet" href="./static/css/animate.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/question.css">
+    <link rel="stylesheet" href="./static/css/result.css">
 </head>
 
 <body>
 <!-- 基本背景 -->
-<div class="basicalBack">
+<div class="basicalBack" id="basicalBackId">
     <!-- 第一页 -->
     <div class="firstPage">
         <!-- 荧幕上的文字 -->
@@ -60,15 +68,66 @@
         <div class="firstPage-button">让我猜猜看</div>
     </div>
 
+    <!-- 页面背景 -->
+    <div class="statusBack"></div>
+    <!-- 答题页面 -->
+    <div class="questionPage">
+        <div class="questionBack backStart">
+            <!-- 场记板的杆子 -->
+            <div class="questionStick"></div>
+            <!-- 场记板 -->
+            <div class="questionBoard">
+                <!-- 题目展示区域 -->
+                <div class="questionArea">
+                    <div class="questions"></div>
+                    <div data-res="" data-id="1" class="ans1"></div>
+                    <div data-res="" data-id="2" class="ans2"></div>
+                    <div data-res="" data-id="3" class="ans3"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 上一幕 -->
+        <div class="questionLast"></div>
+        <!-- 下一幕 -->
+        <div class="questionNext"></div>
+        <!-- 结束答题 -->
+        <div class="questionEnd"></div>
+    </div>
 
-
-
+    <!-- 结果展示页 -->
+    <div class="resultPage" id="resultPage">
+        <div class="resultBack">
+            <div class="resultArea">
+                <!-- 结果页面图片 -->
+                <div class="resultImage">
+                    <img src="./static/pic/firstPage_fox.png" alt="fox">
+                </div>
+                <!-- 结果页面内容 -->
+                <div class="resultContent">
+                    <p class="block1">根据哔哔电的猜测，你是</p>
+                    <p class="content1">自动生成对用户的定义</p>
+                    <p class="block2">老朋友，这么多年，哔哔电仍然<br />在记录着华科的每一幕</p>
+                    <p class="content2">自动生成对匹配的文案，自动生成对匹配的文案，自动生成对匹配的文案，自动生成对匹配的文案，自动生成对匹配的文案，自动生成对匹配的文案。</p>
+                    <p class="block3">华科在变的越来越好，相信你也<br />在变得更好。</p>
+                </div>
+            </div>
+        </div>
+        <div class="favorArea">
+            <div class="favorCode"></div>
+            <div class="favorContent">识别二维码，一起来试镜<br />看看你是华科电影中的哪位演员</div>
+        </div>
+    </div>
 </div>
+<div class="resultImgPage">
+</div>
+<div class="shareButton">分享我的试镜结果</div>
+<div class="againButton">再来一次</div>
 
 
 
-
+<script src="./static/js/data.js"></script>
 <script src="./static/js/tool.js"></script>
+<script src="./static/js/html2canvas.js"></script>
 <script src="./static/js/index.js"></script>
 </body>
 </html>
