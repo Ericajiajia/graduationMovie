@@ -31,7 +31,7 @@
 }
 /*结果页面图片*/
 .resultImage {
-	margin: -.1rem auto 0;
+	margin: 0 auto;
 }
 .resultImage img {
     width: .68rem;
@@ -41,6 +41,7 @@
 .resultContent {
 	font-size: .18rem;
 	font-family: 'hanyi45';
+	font-weight: bolder;
 }
 .block1 {
 	margin: .21rem auto 0;
@@ -50,21 +51,18 @@
 	margin: .1rem auto 0;
 	color: rgb(147, 223, 232);
 }
-.block2 {
-	margin: .2rem auto 0;
-	line-height: .38rem;
-	color: rgb(199, 198, 185);
-}
 .content2 {
-	margin: .15rem auto 0;
-	line-height: .32rem;
-	color: rgb(147, 223, 232);
+    font-size: .16rem;
+    margin: .24rem auto 0;
+    padding: 0 .07rem;
+    line-height: .26rem;
+    color: rgb(147, 223, 232);
+    text-align: justify;
 }
 .block3 {
-	margin: .2rem auto 0;
-	line-height: .32rem;
+	font-size: .2rem;
+	margin: .3rem auto 0;
 	color: rgb(199, 198, 185);
-	font-weight: bolder;
 }
 /*分享按钮*/
 .shareButton {
@@ -73,10 +71,11 @@
 
 	position: fixed;
 	z-index: 8;
-	bottom: .6rem;
-	left: .225rem;
-	width: 1.75rem;
+	bottom: .4rem;
+	left: 50%;
+	width: 2rem;
 	height: .35rem;
+	margin-left: -1.65rem;
 	line-height: .38rem;
 	background: url(../pic/firstPage_button.png);
 	background-size: 100% 100%;
@@ -91,11 +90,12 @@
 
 	position: fixed;
 	z-index: 8;
-	bottom: .6rem;
-	right: .225rem;
+	bottom: .4rem;
+	right: 50%;
 	border: 1.6px solid rgb(68, 178, 190);
 	width: 1.15rem;
 	height: .35rem;
+	margin-right: -1.65rem;
 	box-sizing: border-box;
 	border-radius: .18rem;
 	line-height: .33rem;

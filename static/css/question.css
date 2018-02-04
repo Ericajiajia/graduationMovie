@@ -78,43 +78,52 @@
     padding: .1rem .04rem;
     box-sizing: border-box;
     font-weight: bolder;
+    text-align: center;
 }
 .questions {
 	position: relative;
 	top: 0;
 	left: 0;
-	font-size: .2rem;
+	font-size: .19rem;
 	line-height: .3rem;
 	color: rgb(68, 178, 190);
 	text-align: justify;
 }
-.ans1, .ans2, .ans3 {
+.ansArea {
 	position: relative;
-	top: 0;
+	top: .15rem;
 	left: 50%;
-	margin-left: -.9rem;
-	width: 1.8rem;
+	transform: translateX(-50%);
+	height: 1.3rem;
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-between;
+	flex-direction: column;
+	text-align: center;
+	font-size: .17rem;
+	color: rgb(199, 234, 244);
+}
+.ans1, .ans2, .ans3 {
 	height: .34rem;
 	line-height: .34rem;
-	text-align: center;
-	font-size: .18rem;
-	color: rgb(199, 234, 244);
 	border: 1.6px solid rgba(9, 77, 95, .7);
 	border-radius: .17rem;
-	transition: color .7s ease, border-color .5s ease;
-}
-.ans1 {
-	top: .1rem;
-}
-.ans2 {
-	top: .2rem;
-}
-.ans3 {
-	top: .3rem;
+	transition: color .6s ease, border-color .6s ease, opacity .6s ease;
 }
 .chosen {
-	color: rgb(222, 99, 99);
-	border-color: rgb(222, 99, 99);
+	color: #ffffff;
+	border-color: #ffffff;
+	opacity: .6;
+}
+.ansTrue {
+	color: rgb(0, 255, 0);
+	border-color: rgb(0, 255, 0);
+	opacity: .6;
+}
+.ansFalse {
+	color: rgb(255, 0, 0);
+	border-color: rgb(255, 0, 0);
+	opacity: .6;
 }
 /*上一幕*/
 .questionLast, .questionNext, .questionEnd {
