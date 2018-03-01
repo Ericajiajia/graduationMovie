@@ -134,7 +134,7 @@
 }
 .favorContent {
     margin: 0.05rem auto 0;
-    color: rgb(159, 158, 140);
+    color: #ffffff;
 }
 .resultImgPage {
 	display: none;
@@ -153,5 +153,5 @@
 	bottom: .8rem;
 	right: 16%;
 	font-size: .11rem;
-	color: rgb(159, 158, 140);
+	color: #ffffff;
 }

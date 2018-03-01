@@ -5,6 +5,22 @@ var quesIndexArr = [0, 0, 0, 0, 0],
 	resArr = []
 const problemNum = 5
 
+
+wx.config({
+  debug: false,
+  appId: '',
+  timestamp: 1,
+  nonceStr: '',
+  signature: '',
+  jsApiList: []
+})
+wx.ready(() => {
+  $('.audio')[0].play()
+})
+
+$('.audio')[0].play()
+
+
 const switchFirstPage = () => {
 	$('.basicalBack')[0].className = 'basicalBack backScale'
 	$('.firstPage-macarea')[0].className = 'firstPage-macarea macareaMove'
@@ -294,8 +310,7 @@ const shareFunc = () => {
 				setTimeout(function () {
 					$('.favorTip')[0].style.display = 'block'
 					$('.favorTip')[0].className = 'favorTip animated flipInX'
-					$('.favorArea')[0].style.display = 'none'
-				}, 200)
+				}, 500)
 			})
 	}, 3000)
 }
@@ -304,6 +319,7 @@ const closeImg = () => {
 		$('.resultImgPage')[0].removeChild($('.resultImgPage')[0].firstChild)
 		$('.resultImgPage')[0].style.display = 'none'
 	}
+	$('.favorArea')[0].style.display = 'none'
 	$('.favorTip')[0].className = 'favorTip'
 	$('.favorTip')[0].style.display = 'none'
 	$('.againButton')[0].className = 'againButton'
