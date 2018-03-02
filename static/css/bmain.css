@@ -96,22 +96,46 @@ html, body, .basicalBack {
 }
 .basicalBack {
     background: url(../pic/pages_background.png);
-
-
     background-size: 100% 100%;
-    /*background-size: 170% 170%;*/
-
-
     background-position: 50% 45%;
     transition: background-size 2s ease-out;
 }
+.musicBlock {
+    position: fixed;
+    z-index: 30;
+    top: .1rem;
+    right: .1rem;
+    width: .2rem;
+    height: 0.2rem;
+}
+.musicIcon {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	transform-origin: center center;
+	animation: rotate 4s linear infinite;
+}
+@keyframes rotate {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.musicStop {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: .04rem;
+	width: .22rem;
+	transform: rotate(45deg);
+	transform-origin: center center;
+	border: 0;
+	border-bottom: 1.6px solid #000;
+}
 .firstPage {
-
-
     /*display: none;*/
-
-
-
     width: 100%;
     height: 100%;
     margin: 0;

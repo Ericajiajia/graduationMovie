@@ -20,6 +20,18 @@ wx.ready(() => {
 
 $('.audio')[0].play()
 
+const adjustMusic = function () {
+    let name = $('.musicIcon')[0].style.animationPlayState
+    if (!name) {
+        $('.musicIcon')[0].style.animationPlayState = 'paused'
+        $('.audio')[0].pause()
+    } else {
+        $('.audio')[0].play()
+        $('.musicIcon')[0].style.animationPlayState = ''
+    }
+}
+
+$('.musicIcon')[0].addEventListener('click', adjustMusic)
 
 const switchFirstPage = () => {
 	$('.basicalBack')[0].className = 'basicalBack backScale'
@@ -247,6 +259,7 @@ const resultPage = () => {
 const againFunc = () => {
 	$('.shareButton')[0].className = 'shareButton animated flipOutX'
 	$('.againButton')[0].className = 'againButton animated flipOutX'
+	$('.musicBlock')[0].style.display = 'block'
 	setTimeout(function () {
 		$('.shareButton')[0].style.display = 'none'
 		$('.againButton')[0].style.display = 'none'
@@ -272,6 +285,7 @@ $('.againButton')[0].addEventListener('click', againFunc)
 const shareFunc = () => {
 	$('.shareButton')[0].className = 'shareButton animated flipOutX'
 	$('.againButton')[0].className = 'againButton animated flipOutX'
+	$('.musicBlock')[0].style.display = 'none'
 	setTimeout(function () {
 		$('.favorArea')[0].style.display = 'block'
 		$('.favorArea')[0].className = 'favorArea animated fadeInUp'
@@ -312,13 +326,14 @@ const shareFunc = () => {
 					$('.favorTip')[0].className = 'favorTip animated flipInX'
 				}, 500)
 			})
-	}, 3000)
+	}, 3500)
 }
 const closeImg = () => {
 	if ($('.resultImgPage')[0].hasChildNodes()) {
 		$('.resultImgPage')[0].removeChild($('.resultImgPage')[0].firstChild)
 		$('.resultImgPage')[0].style.display = 'none'
 	}
+	$('.musicBlock')[0].style.display = 'block'
 	$('.favorArea')[0].style.display = 'none'
 	$('.favorTip')[0].className = 'favorTip'
 	$('.favorTip')[0].style.display = 'none'

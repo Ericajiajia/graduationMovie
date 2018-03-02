@@ -47,7 +47,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 98.5%;
+    width: 98.9%;
     height: .8rem;
     background: url(../pic/question_stick.png);
     background-size: 100%;
@@ -105,7 +105,7 @@
 }
 .ans1, .ans2, .ans3 {
 	height: .34rem;
-	line-height: .34rem;
+	line-height: .36rem;
 	border: 1.6px solid rgba(9, 77, 95, .7);
 	border-radius: .17rem;
 	transition: color .6s ease, border-color .6s ease, opacity .6s ease;
